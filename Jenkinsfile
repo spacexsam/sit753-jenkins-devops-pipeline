@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs 'NodeJS'
+    }
+
     environment {
         IMAGE_NAME = "sit753-devops-app"
         CONTAINER_NAME = "sit753-app"
