@@ -6,11 +6,11 @@ pipeline {
     }
 
     environment {
-        IMAGE_NAME = "sit753-devops-app"
-        CONTAINER_NAME = "sit753-app"
-        APP_PORT = "3000"
-    }
-
+    IMAGE_NAME = "sit753-devops-app"
+    CONTAINER_NAME = "sit753-app"
+    APP_PORT = "3000"
+    PATH = "/usr/local/bin:/opt/homebrew/bin:/Applications/Docker.app/Contents/Resources/bin:$PATH"
+}
     stages {
 
         stage('Checkout') {
