@@ -45,7 +45,7 @@ pipeline {
         stage('Security') {
             steps {
                 echo 'Running Trivy security scan...'
-                sh 'trivy image $IMAGE_NAME:$BUILD_NUMBER || true'
+                sh '/opt/homebrew/bin/trivy image $IMAGE_NAME:$BUILD_NUMBER || true'
             }
         }
 
